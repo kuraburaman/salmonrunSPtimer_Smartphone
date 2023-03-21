@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4CAF50">
+    <title>100秒タイマー</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>サーモンラン SP促進タイマー</h1>
+    </header>
+    <br>
+    <div class="checkbox-container">
+        <div class="checkbox-row">
+            <label><input type="checkbox" id="check-70">　残り70秒で知らせる　　</label>
+            <label><input type="checkbox" id="check-50">　残り50秒で知らせる</label>
+        </div>
+        <br>
+        <div class="checkbox-row">
+            <label><input type="checkbox" id="check-30">　残り30秒で知らせる　　</label>
+            <label><input type="checkbox" id="check-15">　残り15秒で知らせる</label>
+        </div>
+        <br>
+        <label><input type="checkbox" id="check-vibrate">　バイブレーションでも知らせる</label>
+    </div>
+    <div class="timer-container">
+        <div class="timer-row">
+            <p class="timer-text">WAVE開始まで</p>
+            <h2 class="timer" id="timer-1">12</h2>
+            <p class="timer-text">＋ 終了まで</p>
+            <h2 class="timer" id="timer-2">100</h2>
+        </div>
+        <br>
+        <button id="start-1" class="timer-start-btn">着地</button>
+        <div class="button-container">
+            <!-- 以下、各ボタンのクラス名を変更 -->
+            <button id="button-10" class="custom-btn">10</button>
+            <button id="button-9" class="custom-btn">9</button>
+            <button id="button-8" class="custom-btn">8</button>
+            <button id="button-7" class="custom-btn">7</button>
+            <button id="button-6" class="custom-btn">6</button>
+            <button id="button-5" class="custom-btn">5</button>
+            <button id="button-4" class="custom-btn">4</button>
+            <button id="button-3" class="custom-btn">3</button>
+            <button id="button-2" class="custom-btn">2</button>
+            <button id="button-1" class="custom-btn">1</button>
+        </div>
+        <button id="start-2" class="timer-start-btn">WAVE開始</button>
+        <button id="stop" class="timer-control-btn">ストップ</button>
+        <button id="reset" class="timer-control-btn">リセット</button>
+    </div>
+    <br>
+    <div class="audio-container">
+        <div class="audio-wrapper">
+          <p>音声1　(残り70秒)</p>
+          <audio id="audio1" src="sound/audio1.mp3" controls></audio>
+        </div>
+        <div class="audio-wrapper">
+          <p>音声2　(残り50秒)</p>
+          <audio id="audio2" src="sound/audio2.mp3" controls></audio>
+        </div>
+        <div class="audio-wrapper">
+          <p>音声3　(残り30秒)</p>
+          <audio id="audio3" src="sound/audio3.mp3" controls></audio>
+        </div>
+        <div class="audio-wrapper">
+          <p>音声4　(残り15秒)</p>
+          <audio id="audio4" src="sound/audio4.mp3" controls></audio>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
