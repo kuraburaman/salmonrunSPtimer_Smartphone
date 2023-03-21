@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f3f3;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+  }
+  
+  .timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timer {
+    font-size: 48px;
+    margin-bottom: 24px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 12px 8px rgba(0, 133, 18, 0.3);
+  }
+  
+  .timer-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .timer-text {
+    margin: 0 8px;
+  }
+  
+  .timer-start-btn,
+  .timer-control-btn,
+  .custom-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .button-container button {
+    margin: 4px;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 16px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .checkbox-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .checkbox-row label {
+    margin: 4px;
+  }
+  
+  input[type="checkbox"] {
+    transform: scale(2.5);
+    margin-right: 4px;
+  }
+  
+  .timer-start-btn:active,
+  .timer-control-btn:active,
+  .custom-btn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) inset;
+  }
+  
+  .audio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 640px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  
+  .audio-wrapper {
+    flex: 0 0 calc(50% - 20px);
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .audio-wrapper p {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  @media (max-width: 480px) {
+    .audio-wrapper {
+      flex: 0 0 calc(100% - 20px);
+    }
+  }
