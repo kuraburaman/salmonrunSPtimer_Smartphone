@@ -1,3 +1,16 @@
+const audioObjects = {};
+
+for (const [name, src] of Object.entries(audioFiles)) {
+  const audio = new Audio(src);
+  audio.load();
+  audioObjects[name] = audio;
+}
+
+function playAudio(name) {
+  const audio = audioObjects[name].cloneNode();
+  audio.play();
+}
+
 async function requestNotificationPermission() {
     if ('Notification' in window) {
       const permission = await Notification.requestPermission();
