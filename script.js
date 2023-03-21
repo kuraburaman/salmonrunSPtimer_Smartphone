@@ -57,21 +57,19 @@ const audioFiles = {
   function showAlertIfNeeded() {
     if (check70.checked && count2 === 70) {
       playAudio("check70");
-      vibrateIfNeeded();
     }
     if (check50.checked && count2 === 50) {
       playAudio("check50");
-      vibrateIfNeeded();
     }
     if (check30.checked && count2 === 30) {
       playAudio("check30");
-      vibrateIfNeeded();
     }
     if (check15.checked && count2 === 15) {
       playAudio("check15");
-      vibrateIfNeeded();
     }
+    vibrateIfNeeded(); // この行を showAlertIfNeeded 関数の最後に移動します
   }
+  
   
   let isPaused = false;
 
