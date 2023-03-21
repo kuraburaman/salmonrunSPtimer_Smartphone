@@ -1,3 +1,31 @@
+async function requestNotificationPermission() {
+    if ('Notification' in window) {
+      const permission = await Notification.requestPermission();
+      if (permission === 'granted') {
+        console.log('通知の許可が得られました。');
+      }
+    }
+  }
+  
+  function showNotification() {
+    if (Notification.permission === 'granted') {
+      const options = {
+        body: 'タイマー通知',
+        vibrate: [200, 100, 200, 100, 200, 100, 200],
+        icon: 'icon.png',
+        badge: 'icon.png'
+      };
+      new Notification('100秒タイマー', options);
+    }
+  }
+  
+  function vibrateViaNotification() {
+    if ('Notification' in window && Notification.permission === 'granted') {
+      showNotification();
+    }
+  }
+  
+
 const timerDisplay1 = document.getElementById("timer-1");
 const timerDisplay2 = document.getElementById("timer-2");
 const startButton1 = document.getElementById("start-1");
@@ -49,10 +77,14 @@ const audioFiles = {
   const checkVibrate = document.getElementById("check-vibrate");
 
   function vibrateIfNeeded() {
-    if (checkVibrate.checked && window.navigator.vibrate) {
-      window.navigator.vibrate(200);
+    if (window.navigator.vibrate) {
+      window.navigator.vibrate([200, 100, 200, 100, 200, 100, 200]);
+    } else {
+      vibrateViaNotification();
     }
   }
+
+  window.addEventListener('load', requestNotificationPermission);
   
   function showAlertIfNeeded() {
     if (check70.checked && count2 === 70) {
